@@ -35,7 +35,7 @@ body {
   grid-template-rows: repeat(2, 1fr);
   border-radius: 50%;
   gap: 1rem;
-  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.5rem 0.25rem rgba(18, 18, 18, 0.5);
   overflow: hidden;
 
   &::before {
@@ -86,14 +86,14 @@ body {
 
       &::after {
         border-top-left-radius: 50%;
-        box-shadow: -0.5rem -0.5rem rgba(0, 0, 0);
+        box-shadow: -0.5rem -0.5rem #121212;
       }
 
       &::before {
         margin-top: auto;
         margin-left: auto;
         border-bottom-right-radius: 50%;
-        box-shadow: 0.5rem 0.5rem rgba(0, 0, 0);
+        box-shadow: 0.5rem 0.5rem #121212;
       }
     }
 
@@ -103,13 +103,13 @@ body {
       &::after {
         margin-top: auto;
         border-bottom-left-radius: 50%;
-        box-shadow: -0.5rem 0.5rem rgba(0, 0, 0);
+        box-shadow: -0.5rem 0.5rem #121212;
       }
 
       &::before {
         margin-left: auto;
         border-top-right-radius: 50%;
-        box-shadow: 0.5rem -0.5rem rgba(0, 0, 0);
+        box-shadow: 0.5rem -0.5rem #121212;
       }
     }
 
@@ -118,14 +118,14 @@ body {
 
       &::after {
         border-top-left-radius: 50%;
-        box-shadow: -0.5rem -0.5rem rgba(0, 0, 0);
+        box-shadow: -0.5rem -0.5rem #121212;
       }
 
       &::before {
         margin-top: auto;
         margin-left: auto;
         border-bottom-right-radius: 50%;
-        box-shadow: 0.5rem 0.5rem rgba(0, 0, 0);
+        box-shadow: 0.5rem 0.5rem #121212;
       }
     }
 
@@ -135,13 +135,13 @@ body {
       &::after {
         margin-left: auto;
         border-top-right-radius: 50%;
-        box-shadow: 0.5rem -0.5rem rgba(0, 0, 0);
+        box-shadow: 0.5rem -0.5rem #121212;
       }
 
       &::before {
         margin-top: auto;
         border-bottom-left-radius: 50%;
-        box-shadow: -0.5rem 0.5rem rgba(0, 0, 0);
+        box-shadow: -0.5rem 0.5rem #121212;
       }
     }
   }
