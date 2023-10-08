@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.simon {
+  position: relative;
+  width: min(90%, 40rem);
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-radius: 50%;
+  gap: 1rem;
+  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 10rem;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "Simon";
+    font-family: "Press Start 2P", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  & .btn {
+    position: relative;
+    transition: filter 0.2s ease-out;
+    filter: brightness(0.9);
+
+    &:active {
+      filter: brightness(1);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 2rem;
+      aspect-ratio: 1;
+      background-color: transparent;
+    }
+
+    &.red {
+      background-color: #ff0000;
+
+      &::after {
+        border-top-left-radius: 50%;
+        box-shadow: -0.5rem -0.5rem rgba(0, 0, 0);
+      }
+
+      &::before {
+        margin-top: auto;
+        margin-left: auto;
+        border-bottom-right-radius: 50%;
+        box-shadow: 0.5rem 0.5rem rgba(0, 0, 0);
+      }
+    }
+
+    &.green {
+      background-color: #00ff00;
+
+      &::after {
+        margin-top: auto;
+        border-bottom-left-radius: 50%;
+        box-shadow: -0.5rem 0.5rem rgba(0, 0, 0);
+      }
+
+      &::before {
+        margin-left: auto;
+        border-top-right-radius: 50%;
+        box-shadow: 0.5rem -0.5rem rgba(0, 0, 0);
+      }
+    }
+
+    &.yellow {
+      background-color: #ffff00;
+
+      &::after {
+        border-top-left-radius: 50%;
+        box-shadow: -0.5rem -0.5rem rgba(0, 0, 0);
+      }
+
+      &::before {
+        margin-top: auto;
+        margin-left: auto;
+        border-bottom-right-radius: 50%;
+        box-shadow: 0.5rem 0.5rem rgba(0, 0, 0);
+      }
+    }
+
+    &.blue {
+      background-color: #0000ff;
+
+      &::after {
+        margin-left: auto;
+        border-top-right-radius: 50%;
+        box-shadow: 0.5rem -0.5rem rgba(0, 0, 0);
+      }
+
+      &::before {
+        margin-top: auto;
+        border-bottom-left-radius: 50%;
+        box-shadow: -0.5rem 0.5rem rgba(0, 0, 0);
+      }
+    }
+  }
+}
